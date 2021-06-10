@@ -34,7 +34,7 @@ services:
       - 1705:1705
       - 1780:1780
 
-   logging:
+  logging:
     image: balenablocks/log2screen
     privileged: true
     restart: always
