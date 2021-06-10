@@ -48,3 +48,11 @@ services:
   # Plugins
   # -- Additional plugins can be added. See https://sound.balenalabs.io/docs/plugins.
   # -- Remove unwanted plugins as needed
+  bluetooth:
+    build: ./plugins/bluetooth
+    restart: on-failure
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+    labels:
+      io.balena.features.dbus: 1
